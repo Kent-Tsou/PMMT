@@ -17,18 +17,6 @@ body {
     background: white;
 }
 
-.form_hidden {
-    display: none;
-}
-
-.form > *:first-child {
-    margin-top: 0;
-}
-
-.form > *:last-child {
-    margin-bottom: 0;
-}
-
 .form_message {
     text-align: center;
     margin-bottom: 1rem;
