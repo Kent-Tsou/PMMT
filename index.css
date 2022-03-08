@@ -17,20 +17,6 @@ body {
     background: white;
 }
 
-.form_message {
-    text-align: center;
-    margin-bottom: 1rem;
-
-}
-
-.form_message-error {
-    color: red;
-}
-
-.form_message-sucess {
-    color: green;
-}
-
 .form_title {
     margin-bottom: 2rem;
     text-align: center;
@@ -57,16 +43,6 @@ body {
     background: white;
 }
 
-.form_input-error {
-    color: red;
-    border-color: red;
-}
-
-.form_input-error-message {
-    margin-top: 0.5rem;
-    font-size: 0.85rem;
-    color: red;
-}
 
 .form_button {
     border-radius: 7px;
@@ -101,4 +77,8 @@ body {
 
 .form_link:hover {
     text-decoration: underline;
+}
+
+.form_hidden {
+    display: none;
 }

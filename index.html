@@ -1,59 +1,103 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
-        <title>PMMT</title>
-        <link rel="stylesheet" href="index.css">
-    </head>
 
-    <body>
-         <div class="container">
-            <form class="form1" id="login">
-                <div>
-                    <h1 class="form_title" id="login">Login</h1>
-                </div>
-                <div class="form_message form_message-error"></div>
-                <div class="form_input-group">
-                    <input type="text" class="form_input" autofocus placeholder="Username or email"></input>
-                    <div class="form_input-error-message"></div>
-                </div>
-                <div class="form_input-group">
-                <input type="password" class="form_input" autofocus placeholder="Password"></input>
-                <div class="form_input-error-message"></div>
-                <button class="form_button" type="submit">Continue</button>
-                <p class="form_text">
-                    <a href="#" class="form_link">Forgot your passsord?</a>
-                </p>
-                <p class="form_text">
-                    <a class="form_link" href="./" id="linkCreateAccount" onclick="forms(2)">Dont have an account? Create account</a>
-                </p>
-            </form>
-
-            <form class="form2" id="createAccount">
-                <div>
-                    <h1 class="form_title">Create Account</h1>
-                </div>
-                <div class="form_message form_message-error"></div>
-                <div class="form_input-group">
-                    <input type="text" class="form_input" autofocus placeholder="Username"></input>
-                    <div class="form_input-error-message"></div>
+<head>
+    <title>PMMT</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+            <form class="form form_hidden" id="login">
+                <div class="form_title">
+                    <h1>Login</h1>
                 </div>
                 <div class="form_input-group">
-                    <input type="text" class="form_input" autofocus placeholder="Email Adress"></input>
-                    <div class="form_input-error-message"></div>
+                    <input type="text" class="form_input" autofocus placeholder="Username or Email"></input>
                 </div>
                 <div class="form_input-group">
                     <input type="password" class="form_input" autofocus placeholder="Password"></input>
-                    <div class="form_input-error-message"></div>
+                </div>
+                <button class="form_button" type="submit">Continue</button>
+                <div>
+                    <a  class="form_link" id="linkCreateAccount" onclick="goToCreate()">Dont have an account? Create Account.</a>
+                </div>
+            </form>
+            <form class="form" id="createAccount">
+                <div class="form_title"><h1>Create Account</h1></div>
                 <div class="form_input-group">
-                <input type="password" class="form_input" autofocus placeholder="Confirm Password"></input>
-                    <div class="form_input-error-message"></div>
+                    <input type="text" class="form_input" autofocus placeholder="Username"></input>
+                </div>
+                <div class="form_input-group">
+                    <input type="text" class="form_input" autofocus placeholder="Email"></input>
+                </div>
+                <div class="form_input-group">
+                    <input type="password" class="form_input" autofocus placeholder="Password"></input>
+                </div>
+                <div class="form_input-group">
+                    <input type="password" class="form_input" autofocus placeholder="Confirm Password"></input>
+                </div>
                 <button class="form_button" type="submit">Continue</button>
                 <p class="form_text">
-                    <a class="form_link" href="./" id="linkLogin" onclick="forms(1)">Already have an account? Sign in</a>
+                    <a class="form_link" id="linkLogin" onclick="goToSignUp()">Already have an account? Sign in.</a>
                 </p>
             </form>
-        </div>
-        <script src="index.js"></script>
-    </body>
+    </div>
+    <script src="index.js"></script>
+</body>
 </html>
+<!-- <body>
+    <div class="page_layout">
+        <div class="parent">
+            <div class="child" id="login-container">
+                <form class="form1" id="login">
+                    <div>
+                        <h1 class="form_title" id="login">Login</h1>
+                    </div>
+                    <div class="form_message form_message-error"></div>
+                    <div class="form_input-group">
+                        <input type="text" class="form_input" autofocus placeholder="Username or email"></input>
+                        <div class="form_input-error-message"></div>
+                    </div>
+                    <div class="form_input-group">
+                        <input type="password" class="form_input" autofocus placeholder="Password"></input>
+                        <div class="form_input-error-message"></div>
+                        <button class="form_button" type="submit">Continue</button>
+                        <p class="form_text">
+                            <a href="#" class="form_link">Forgot your passsord?</a>
+                        </p>
+                        <p class="form_text">
+                            <a class="form_link" id="linkCreateAccount" onclick="goToCreate()">Dont have an account?
+                                Create account</a>
+                        </p>
+                </form>
+            </div>
+            <div class="child" style="display: none;" id="signup-container">
+                <form class="form2" id="createAccount">
+                    <div>
+                        <h1 class="form_title">Create Account</h1>
+                    </div>
+                    <div class="form_message form_message-error"></div>
+                    <div class="form_input-group">
+                        <input type="text" class="form_input" autofocus placeholder="Username"></input>
+                        <div class="form_input-error-message"></div>
+                    </div>
+                    <div class="form_input-group">
+                        <input type="text" class="form_input" autofocus placeholder="Email Adress"></input>
+                        <div class="form_input-error-message"></div>
+                    </div>
+                    <div class="form_input-group">
+                        <input type="password" class="form_input" autofocus placeholder="Password"></input>
+                        <div class="form_input-error-message"></div>
+                        <div class="form_input-group">
+                            <input type="password" class="form_input" autofocus placeholder="Confirm Password"></input>
+                            <div class="form_input-error-message"></div>
+                            <button class="form_button" type="submit">Continue</button>
+                            <p class="form_text">
+                                <a class="form_link" id="linkLogin" onclick="goToSignUp()">Already have an account? Sign
+                                    in</a>
+                            </p>
+                </form>
+            </div>
+        </div>
+    </div> -->
